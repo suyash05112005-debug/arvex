@@ -22,6 +22,8 @@ body {
   background-color: rgb(var(--bg));
   color: rgb(var(--fg));
   overscroll-behavior-y: none;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 html {

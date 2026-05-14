@@ -45,19 +45,31 @@ export function LeadForm() {
 
   async function submit(e: FormEvent) {
     e.preventDefault();
+    if (status === "submitting" || status === "success") return;
+    
     setStatus("submitting");
     try {
-      const res = await fetch("/api/lead", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b5344f78-734c-4845-941e-b97f77654b73",
+          subject: `New Lead: ${form.name} (${form.projectType})`,
+          from_name: "Arvex Studio",
+          replyto: form.email,
+          ...form,
+        }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || "Submission failed");
+        throw new Error(data.message || "Submission failed");
       }
       setStatus("success");
     } catch (err) {
+      console.error("[Web3Forms Lead Error]:", err);
       setErrorMsg(err instanceof Error ? err.message : "Submission failed");
       setStatus("error");
     }

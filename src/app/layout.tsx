@@ -30,7 +30,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = process.env.SITE_URL || "http://localhost:3000";
+const SITE_URL = process.env.SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -92,9 +92,11 @@ export default function RootLayout({
         <OrganizationJsonLd />
         <ScrollProgress />
         <SmoothScroll>
-          <Nav />
-          <main className="relative z-[2]">{children}</main>
-          <Footer />
+          <div className="relative flex min-h-screen flex-col overflow-x-hidden w-full">
+            <Nav />
+            <main className="relative z-[2] flex-1">{children}</main>
+            <Footer />
+          </div>
         </SmoothScroll>
         <WhatsAppButton />
       </body>

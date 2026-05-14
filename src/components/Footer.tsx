@@ -149,16 +149,27 @@ function NewsletterForm() {
 
   async function submit(e: FormEvent) {
     e.preventDefault();
+    if (status === "ok") return;
+
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("err");
       return;
     }
     
     try {
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b5344f78-734c-4845-941e-b97f77654b73",
+          subject: "New Newsletter Subscriber",
+          from_name: "Arvex Newsletter",
+          replyto: email,
+          email,
+        }),
       });
       
       if (!res.ok) throw new Error();
@@ -166,6 +177,7 @@ function NewsletterForm() {
       setStatus("ok");
       setEmail("");
     } catch (err) {
+      console.error("[Web3Forms Newsletter Error]:", err);
       setStatus("err");
     }
   }
