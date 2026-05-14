@@ -52,7 +52,7 @@ export function Recognition() {
           <div className="lg:col-span-7">
             {/* Project types */}
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                 Commissions we accept
               </p>
               <ul className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-3 md:mt-7 md:gap-x-12 md:gap-y-5">
@@ -76,7 +76,7 @@ export function Recognition() {
 
             {/* Projects */}
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                 Selected commissions
               </p>
               <ul className="mt-7 divide-y divide-champagne-200/70">
@@ -91,10 +91,10 @@ export function Recognition() {
                   >
                     {/* Mobile: stacked layout. Desktop: 12-col grid. */}
                     <div className="flex items-baseline justify-between md:hidden">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/45">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/55">
                         {p.year}
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export function Recognition() {
                     </p>
 
                     {/* Desktop grid */}
-                    <span className="hidden md:col-span-1 md:inline font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+                    <span className="hidden md:col-span-1 md:inline font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/45">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="hidden md:col-span-5 md:inline font-display text-[22px] leading-tight tracking-tight text-graphite">
@@ -115,7 +115,7 @@ export function Recognition() {
                     <span className="hidden md:col-span-4 md:inline text-[13px] leading-snug text-graphite/65">
                       {p.place}
                     </span>
-                    <span className="hidden md:col-span-2 md:inline text-right font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55">
+                    <span className="hidden md:col-span-2 md:inline text-right font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/55">
                       {p.year}
                     </span>
                   </motion.li>

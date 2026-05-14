@@ -18,6 +18,8 @@ export const metadata: Metadata = {
 // Resolve the hero image at build time. If the dedicated consultation
 // photograph hasn't been generated yet, fall back to an existing context
 // shot so the page is still beautiful from day one.
+// NOTE: The fallback filename references the physical file on disk which
+// retains its original generation name regardless of the product rename.
 function resolveHeroImage(): string {
   const dedicated = "/assets/consultation/consultation-hero.jpg";
   const fallback = "/assets/products/generated/aurora-veil-context.jpg";

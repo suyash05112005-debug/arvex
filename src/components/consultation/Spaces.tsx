@@ -73,10 +73,10 @@ export function ConsultationSpaces() {
               className="group relative bg-ivory-veil p-9 transition-colors duration-700 hover:bg-porcelain"
             >
               <div className="flex items-baseline justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                   Brief {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/45">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/45">
                   {s.hint}
                 </span>
               </div>

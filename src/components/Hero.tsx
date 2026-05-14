@@ -17,21 +17,21 @@ const HERO_BANNER_SRC = "/assets/products/generated/hero-banner.jpg";
 
 const SLIDES = [
   {
-    eyebrow: "The Atelier",
-    title: ["Lighting,", "made one ", "at a time."],
-    body: "Each Arvex chandelier is hand-built in our Jaipur atelier — cut, polished, and assembled by the same maker from start to finish. Signed, numbered, and delivered with white-glove installation across India.",
-    meta: ["Made in our Jaipur atelier", "Numbered editions", "14–22 week lead time"],
+    eyebrow: "The Studio",
+    title: ["Bespoke lighting,", "built one at", "a time."],
+    body: "Every piece is built to order in our Noida studio — drawn, engineered, and assembled by the same hands. We deliver and install directly to projects across India.",
+    meta: ["Made in our Noida studio", "Numbered editions", "14–22 week lead time"],
   },
   {
-    eyebrow: "Featured Piece — Aurora Veil",
-    title: ["A waterfall ", "of crystal, ", "in champagne brass."],
-    body: "Hand-cut crystal pendants suspended from a polished champagne-brass spine. A 2.4-metre fixture for double-height foyers, grand staircases, and luxury banquet halls.",
+    eyebrow: "Featured Piece — Aurora",
+    title: ["Aurora — ", "champagne brass", "& cut crystal."],
+    body: "Hand-cut crystal pendants suspended from a solid brass spine. A 2.4-metre fixture designed for double-height foyers and grand staircases.",
     meta: ["Edition of 12", "240 × 90 cm", "Price on request"],
   },
   {
-    eyebrow: "Featured Piece — Axis Mundi",
-    title: ["A constellation,", "that turns,", "slowly."],
-    body: "Twelve concentric brushed-brass rings rotate on independent magnetic bearings — a slow orrery of architectural light. Specified for villa entrance halls and boutique hotel lobbies.",
+    eyebrow: "Featured Piece — Axis",
+    title: ["Axis — ", "kinetic light", "in motion."],
+    body: "Twelve brushed-brass rings that rotate independently on magnetic bearings. Engineered for villa entrance halls and hotel lobbies, casting slowly shifting shadows.",
     meta: ["Edition of 10", "150 × 110 cm", "Price on request"],
   },
 ];
@@ -104,7 +104,7 @@ export function Hero() {
       {/* Slide indicator — top-right on mobile (below nav, above copy);
           bottom-right on desktop. Tap targets bumped to 44px for touch. */}
       <div className="absolute right-6 top-[150px] z-10 flex items-center gap-3 md:right-12 md:top-auto md:bottom-12 lg:right-16">
-        <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/40">
           {String(index + 1).padStart(2, "0")} / {String(SLIDES.length).padStart(2, "0")}
         </span>
         <div className="flex gap-1">
@@ -145,20 +145,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.4, ease: [0.3, 0.8, 0.2, 1] }}
             className="max-w-2xl"
           >
             <p className="eyebrow mb-7 text-graphite/70 md:mb-10">{slide.eyebrow}</p>
-            <h1 className="font-display text-[clamp(2.05rem,7vw,5.6rem)] leading-[1.04] tracking-[-0.022em] text-graphite md:leading-[1.02]">
+            <h1 className="font-display text-[clamp(2.05rem,7vw,5.6rem)] leading-[1.08] tracking-[-0.018em] text-graphite md:leading-[1.06]">
               {slide.title.map((part, i) => (
                 <motion.span
                   key={`${index}-${i}`}
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 1.2,
-                    delay: 0.2 + i * 0.16,
-                    ease: [0.22, 1, 0.36, 1],
+                    duration: 1.5,
+                    delay: 0.2 + i * 0.18,
+                    ease: [0.3, 0.8, 0.2, 1],
                   }}
                   className="inline-block"
                 >
@@ -170,7 +170,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="mt-6 max-w-[560px] font-sans text-[15px] leading-[1.7] text-graphite/65 md:mt-8 md:text-[17px] md:leading-[1.75]"
+              className="mt-6 max-w-[560px] font-sans text-[15px] leading-[1.75] text-graphite/60 md:mt-8 md:text-[17px] md:leading-[1.8]"
             >
               {slide.body}
             </motion.p>
@@ -192,7 +192,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.1, delay: 1.25 }}
-              className="mt-10 hidden flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55 md:mt-16 md:flex"
+              className="mt-10 hidden flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/45 md:mt-16 md:flex"
             >
               {slide.meta.map((m, i) => (
                 <span key={m} className="flex items-center gap-3">
@@ -215,7 +215,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6 }}
-        className="absolute bottom-12 left-6 z-10 hidden flex-col items-start gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45 md:left-12 md:flex lg:left-16"
+        className="absolute bottom-12 left-6 z-10 hidden flex-col items-start gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40 md:left-12 md:flex lg:left-16"
       >
         <span className="block h-10 w-px bg-graphite/25" />
         Scroll to explore

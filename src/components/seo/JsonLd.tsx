@@ -23,20 +23,21 @@ export function OrganizationJsonLd() {
         url: SITE_URL,
         logo: `${SITE_URL}/logo.svg`,
         description:
-          "Hand-built bespoke chandeliers and architectural lighting — made one at a time in our Jaipur atelier for private residences, hospitality projects, and luxury commercial interiors across India.",
+          "Hand-built bespoke chandeliers and architectural lighting — made one at a time in our Noida studio for private residences, hospitality projects, and luxury commercial interiors across India.",
         sameAs: [],
         address: {
           "@type": "PostalAddress",
           addressCountry: "IN",
-          addressRegion: "Rajasthan",
-          addressLocality: "Jaipur",
-          postalCode: "302012",
-          streetAddress: "Atelier 17, Sirsi Road",
+          addressRegion: "UP",
+          addressLocality: "Noida",
+          postalCode: "201301",
+          streetAddress: "G-19, Sector 2",
         },
         contactPoint: [
           {
             "@type": "ContactPoint",
-            email: "hello@arvex.studio",
+            telephone: "+91-95990-75766",
+            email: "info@arvexgroup.in",
             contactType: "customer support",
             areaServed: "IN",
             availableLanguage: ["en", "hi"],

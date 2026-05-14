@@ -1,78 +1,78 @@
 {
-  "aurora-veil": {
+  "aurora": {
     "hero": "/assets/products/generated/aurora-veil-hero.jpg",
     "detail": "/assets/products/generated/aurora-veil-detail.jpg",
     "context": "/assets/products/generated/aurora-veil-context.jpg",
     "ortho": "/assets/products/generated/aurora-veil-ortho.jpg",
     "low": "/assets/products/generated/aurora-veil-low.jpg"
   },
-  "halo-mercury": {
+  "celeste": {
     "hero": "/assets/products/generated/halo-mercury-hero.jpg",
     "detail": "/assets/products/generated/halo-mercury-detail.jpg",
     "context": "/assets/products/generated/halo-mercury-context.jpg"
   },
-  "axis-mundi": {
+  "axis": {
     "hero": "/assets/products/generated/axis-mundi-hero.jpg",
     "detail": "/assets/products/generated/axis-mundi-detail.jpg",
     "context": "/assets/products/generated/axis-mundi-context.jpg"
   },
-  "stratus-fall": {
+  "cascade": {
     "hero": "/assets/products/generated/stratus-fall-hero.jpg"
   },
-  "photon-rain": {
+  "vesper": {
     "hero": "/assets/products/generated/photon-rain-hero.jpg"
   },
-  "fjord-cascade": {
+  "opal": {
     "hero": "/assets/products/generated/fjord-cascade-hero.jpg",
     "detail": "/assets/products/generated/fjord-cascade-detail.jpg",
     "context": "/assets/products/generated/fjord-cascade-context.jpg"
   },
-  "tessera-lift": {
+  "eclipse": {
     "hero": "/assets/products/generated/tessera-lift-hero.jpg"
   },
-  "spire-helix": {
+  "obsidian": {
     "hero": "/assets/products/generated/spire-helix-hero.jpg"
   },
-  "lattice-bloom": {
+  "verona": {
     "hero": "/assets/products/generated/lattice-bloom-hero.jpg"
   },
-  "medusa-bloom": {
+  "mira": {
     "hero": "/assets/products/generated/medusa-bloom-hero.jpg",
     "detail": "/assets/products/generated/medusa-bloom-detail.jpg",
     "context": "/assets/products/generated/medusa-bloom-context.jpg",
     "low": "/assets/products/generated/medusa-bloom-low.jpg"
   },
-  "coral-aria": {
+  "solis": {
     "hero": "/assets/products/generated/coral-aria-hero.jpg"
   },
-  "lichen-glow": {
+  "aura": {
     "hero": "/assets/products/generated/lichen-glow-hero.jpg"
   },
-  "abyssal-orb": {
+  "elara": {
     "hero": "/assets/products/generated/abyssal-orb-hero.jpg"
   },
-  "monolith-thin": {
+  "meridian": {
     "hero": "/assets/products/generated/monolith-thin-hero.jpg",
     "detail": "/assets/products/generated/monolith-thin-detail.jpg",
     "context": "/assets/products/generated/monolith-thin-context.jpg"
   },
-  "halo-zero": {
+  "halo": {
     "hero": "/assets/products/generated/halo-zero-hero.jpg"
   },
-  "field-grid": {
+  "horizon": {
     "hero": "/assets/products/generated/field-grid-hero.jpg"
   },
-  "vertex-pure": {
+  "arc": {
     "hero": "/assets/products/generated/vertex-pure-hero.jpg"
   },
-  "void-arc": {
+  "lumiere": {
     "hero": "/assets/products/generated/void-arc-hero.jpg",
     "detail": "/assets/products/generated/void-arc-detail.jpg"
   },
-  "origami-nebula": {
+  "nova": {
     "hero": "/assets/products/generated/origami-nebula-hero.jpg"
   },
-  "petal-quiet": {
+  "silhouette": {
     "hero": "/assets/products/generated/petal-quiet-hero.jpg"
   }
 }

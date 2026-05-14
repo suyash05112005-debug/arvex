@@ -102,7 +102,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   key={m}
                   className="grid grid-cols-12 items-baseline gap-4 border-t border-champagne-200/70 py-5 first:border-t-0"
                 >
-                  <span className="col-span-1 font-mono text-[10px] uppercase tracking-[0.28em] text-champagne-600">
+                  <span className="col-span-1 font-mono text-[10px] uppercase tracking-[0.2em] text-champagne-600">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="col-span-11 font-display text-[22px] leading-tight tracking-tight text-graphite md:text-[26px]">
@@ -130,7 +130,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               </div>
               <Link
                 href="/#collection"
-                className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite hover:text-champagne-600"
+                className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite hover:text-champagne-600"
               >
                 View full collection →
               </Link>
@@ -172,7 +172,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                       </h3>
                       <p className="mt-1.5 text-[13px] text-graphite/55">{r.tagline}</p>
                     </div>
-                    <span className="shrink-0 pt-1 font-mono text-[10px] uppercase tracking-[0.28em] text-champagne-600">
+                    <span className="shrink-0 pt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-champagne-600">
                       {r.edition}
                     </span>
                   </div>
@@ -191,7 +191,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 function Spec({ k, v }: { k: string; v: string }) {
   return (
     <div className="border-b border-champagne-200/70 py-5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
         {k}
       </dt>
       <dd className="mt-2 font-display text-[26px] leading-tight tracking-tight text-graphite">

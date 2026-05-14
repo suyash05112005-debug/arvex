@@ -4,8 +4,9 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ConciergeAgent } from "@/components/ConciergeAgent";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
 
 const display = Cormorant_Garamond({
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
     template: "%s · Arvex",
   },
   description:
-    "Arvex is a Jaipur atelier of bespoke chandeliers and architectural lighting. Hand-built, signed, and numbered for private residences, hospitality projects, and luxury commercial interiors across India.",
+    "Arvex is a Noida-based studio of bespoke chandeliers and architectural lighting. Hand-built, signed, and numbered for private residences, hospitality projects, and luxury commercial interiors across India.",
   keywords: [
     "luxury chandelier India",
     "bespoke chandelier",
-    "hand-made chandelier Jaipur",
+    "hand-made chandelier Noida",
     "architectural lighting India",
     "luxury lighting designer",
     "custom chandelier for villas",
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Arvex — Hand-Built Luxury Chandeliers, Made in India",
     description:
-      "Bespoke chandeliers and architectural lighting, hand-built in our Jaipur atelier. Numbered editions for residences, hospitality, and luxury commercial interiors.",
+      "Bespoke chandeliers and architectural lighting, hand-built in our Noida studio. Numbered editions for residences, hospitality, and luxury commercial interiors.",
     url: SITE_URL,
     siteName: "Arvex",
     locale: "en_IN",
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Arvex — Hand-Built Luxury Chandeliers, Made in India",
     description:
-      "Bespoke chandeliers, hand-built in our Jaipur atelier. Numbered editions, signed by the maker, delivered with white-glove installation across India.",
+      "Bespoke chandeliers, hand-built in our Noida studio. Numbered editions, signed by the maker, delivered with white-glove installation across India.",
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
@@ -87,6 +88,7 @@ export default function RootLayout({
       className={`${display.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="font-sans antialiased bg-high-key min-h-screen overflow-x-hidden">
+        <ScrollToTop />
         <OrganizationJsonLd />
         <ScrollProgress />
         <SmoothScroll>
@@ -94,7 +96,7 @@ export default function RootLayout({
           <main className="relative z-[2]">{children}</main>
           <Footer />
         </SmoothScroll>
-        <ConciergeAgent />
+        <WhatsAppButton />
       </body>
     </html>
   );

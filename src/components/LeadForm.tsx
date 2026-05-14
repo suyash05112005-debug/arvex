@@ -82,21 +82,21 @@ export function LeadForm() {
           {/* Left: copy */}
           <div className="lg:col-span-5">
             <p className="eyebrow mb-10 text-graphite/65">Private Consultation</p>
-            <h2 className="font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.02] tracking-[-0.012em] text-graphite">
+            <h2 className="font-display text-[clamp(2.2rem,4.6vw,3.8rem)] leading-[1.08] tracking-[-0.012em] text-graphite">
               Discuss your project with the atelier.
             </h2>
-            <p className="mt-8 max-w-[460px] text-[16px] leading-[1.78] text-graphite/65 md:text-[17px]">
-              A senior member of our atelier responds within 24 hours. We arrange
-              in-person consultations in Jaipur, Mumbai, and New Delhi, and travel
+            <p className="mt-8 max-w-[460px] text-[15px] leading-[1.8] text-graphite/60 md:text-[16px]">
+              A senior member of our studio responds within 24 hours. We arrange
+              in-person consultations in Noida, Mumbai, and New Delhi, and travel
               for on-site project visits across India.
             </p>
 
-            <ul className="mt-14 space-y-5 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55">
+            <ul className="mt-14 space-y-5 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/50">
               <li className="flex items-start gap-4">
                 <Dot /> 24-hour response, atelier-direct
               </li>
               <li className="flex items-start gap-4">
-                <Dot /> Private viewings in Jaipur, Mumbai & Delhi
+                <Dot /> Private viewings in Noida, Mumbai & Delhi
               </li>
               <li className="flex items-start gap-4">
                 <Dot /> White-glove delivery and installation across India
@@ -118,7 +118,7 @@ export function LeadForm() {
                 className="glass relative overflow-hidden rounded-sm p-6 md:p-14"
               >
                 {/* Step indicator */}
-                <div className="mb-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55 md:mb-10 md:gap-4">
+                <div className="mb-8 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/50 md:mb-10 md:gap-4">
                   {[0, 1, 2, 3].map((s) => (
                     <div key={s} className="flex flex-1 items-center gap-3">
                       <span className={cn("transition-colors", step >= s ? "text-graphite" : "text-graphite/35")}>
@@ -182,7 +182,6 @@ export function LeadForm() {
                           <Field label="Full name" required>
                             <input
                               required
-                              autoFocus
                               value={form.name}
                               onChange={(e) => update("name", e.target.value)}
                               className={inputCls}
@@ -325,7 +324,7 @@ export function LeadForm() {
 }
 
 const inputCls =
-  "w-full rounded-[2px] border border-graphite/15 bg-white/55 px-5 py-3.5 font-sans text-[15px] text-graphite placeholder:text-graphite/35 outline-none transition-all duration-500 focus:border-champagne-500 focus:bg-white/90 focus:shadow-halo";
+  "w-full rounded-[2px] border border-graphite/15 bg-white/55 px-5 py-3.5 font-sans text-[16px] text-graphite placeholder:text-graphite/35 outline-none transition-all duration-500 focus:border-champagne-500 focus:bg-white/90 focus:shadow-halo";
 
 function Fieldset({
   title,
@@ -338,7 +337,7 @@ function Fieldset({
 }) {
   return (
     <div>
-      <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+      <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
         {subtitle}
       </p>
       <h3 className="mt-3 font-display text-[28px] leading-[1.1] tracking-tight text-graphite md:text-[32px]">

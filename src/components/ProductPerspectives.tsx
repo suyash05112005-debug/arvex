@@ -64,7 +64,7 @@ export function ProductPerspectives({ product }: { product: Product }) {
               calibrated in the room before sign-off.
             </p>
           </div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
             {String(panels.length).padStart(2, "0")} {panels.length === 1 ? "perspective" : "perspectives"}
           </span>
         </div>
@@ -86,7 +86,7 @@ export function ProductPerspectives({ product }: { product: Product }) {
               className="object-cover object-center"
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-graphite/22 via-graphite/6 to-transparent" />
-            <div className="absolute bottom-5 left-5 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-ivory/85">
+            <div className="absolute bottom-5 left-5 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ivory/85">
               <span className="h-px w-6 bg-champagne-400" />
               {panels[0].kind}
             </div>
@@ -117,7 +117,7 @@ export function ProductPerspectives({ product }: { product: Product }) {
                   className="object-cover object-center transition-transform duration-[1200ms] [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02]"
                 />
                 <div className="pointer-events-none absolute inset-3 rounded-[1px] ring-1 ring-inset ring-white/30" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.32em] text-ivory/85 drop-shadow">
+                <div className="absolute bottom-4 left-4 flex items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.22em] text-ivory/85 drop-shadow">
                   <span className="h-px w-5 bg-champagne-400" />
                   {p.kind}
                 </div>

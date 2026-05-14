@@ -44,7 +44,7 @@ export function ConsultationHero({ heroSrc }: { heroSrc: string }) {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, ease: [0.3, 0.8, 0.2, 1] }}
           className="eyebrow mb-10 text-graphite/70"
         >
           Private Consultation
@@ -52,27 +52,26 @@ export function ConsultationHero({ heroSrc }: { heroSrc: string }) {
         <motion.h1
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.4, delay: 0.15, ease: [0.3, 0.8, 0.2, 1] }}
           className="max-w-3xl font-display text-[clamp(2.4rem,6.4vw,5.4rem)] leading-[1.02] tracking-[-0.022em] text-graphite"
         >
           Lighting design,{" "}
-          <span className="text-iridescent">made for the room you live in.</span>
+          <span className="text-iridescent">tailored to the space.</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, delay: 0.55, ease: [0.3, 0.8, 0.2, 1] }}
           className="mt-8 max-w-[560px] text-[16px] leading-[1.78] text-graphite/65 md:text-[17px]"
         >
-          A senior member of the atelier will study the room, walk you through
-          the collection, and propose either an existing piece, an edition
-          variant, or a fully bespoke commission. The first consultation is
-          unhurried and at no charge.
+          We begin by studying your room, walking you through the collection,
+          and proposing a piece that fits the architecture. The first consultation
+          is unhurried and complimentary.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.85, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, delay: 0.85, ease: [0.3, 0.8, 0.2, 1] }}
           className="mt-12 flex flex-wrap items-center gap-3"
         >
           <a href="#enquire" className="btn-primary">
@@ -92,7 +91,7 @@ export function ConsultationHero({ heroSrc }: { heroSrc: string }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.1, delay: 1.1 }}
-          className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55"
+          className="mt-16 flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/55"
         >
           <span>24-hour response</span>
           <span className="hidden h-px w-5 bg-champagne-300 md:inline-block" />

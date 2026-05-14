@@ -54,7 +54,7 @@ function respond(message: string): { reply: string; suggestions?: string[] } {
   ) {
     return {
       reply:
-        "We arrange private consultations at our Jaipur atelier and showrooms in Mumbai and New Delhi, and travel for on-site project visits across India. The Request Private Consultation form just below is the fastest route — a senior member of the atelier responds within 24 hours.",
+        "We arrange private consultations at our Noida studio and showrooms in Mumbai and New Delhi, and travel for on-site project visits across India. The Request Private Consultation form just below is the fastest route — a senior member of the studio responds within 24 hours.",
       suggestions: ["Open the form", "What is the lead time?"],
     };
   }

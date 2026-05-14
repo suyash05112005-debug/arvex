@@ -35,7 +35,7 @@ export function Nav() {
         >
           <Link
             href="/"
-            className="font-display text-2xl tracking-[0.04em] text-graphite md:text-3xl"
+            className="font-display text-2xl tracking-[0.02em] text-graphite md:text-3xl"
           >
             Arvex
             <span className="ml-1 align-super font-mono text-[8px] tracking-[0.2em] text-graphite/55">
@@ -56,7 +56,7 @@ export function Nav() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="rounded-full px-4 py-2 text-[12px] uppercase tracking-[0.2em] text-graphite/75 transition-colors hover:bg-white/55 hover:text-graphite"
+                    className="rounded-full px-4 py-2 text-[11.5px] uppercase tracking-[0.16em] text-graphite/70 transition-colors hover:bg-white/55 hover:text-graphite"
                   >
                     {l.label}
                   </a>
@@ -68,7 +68,7 @@ export function Nav() {
           <div className="hidden items-center gap-3 md:flex">
             <a
               href="/consultation"
-              className="rounded-full bg-graphite px-5 py-2 text-[11px] uppercase tracking-[0.22em] text-ivory transition-all duration-500 hover:bg-ink hover:shadow-halo"
+              className="rounded-full bg-graphite px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] text-ivory transition-all duration-500 hover:bg-ink hover:shadow-halo"
             >
               Book Consultation
             </a>
@@ -142,7 +142,7 @@ export function Nav() {
                     <a
                       href={l.href}
                       onClick={() => setOpen(false)}
-                      className="block font-display text-5xl tracking-tight text-graphite"
+                      className="block font-display text-[clamp(2.5rem,10vw,3.5rem)] tracking-tight text-graphite"
                     >
                       {l.label}
                     </a>
@@ -158,8 +158,8 @@ export function Nav() {
                 >
                   Book Private Consultation →
                 </a>
-                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/45">
-                  hello@arvex.studio · Jaipur · Mumbai · Delhi
+                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40">
+                  info@arvexgroup.in · Noida · Mumbai · Delhi
                 </p>
               </div>
             </motion.div>

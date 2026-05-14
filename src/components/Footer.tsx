@@ -15,41 +15,46 @@ export function Footer() {
               commissions, and the occasional drawing.
             </h3>
             <NewsletterForm />
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/45">
+            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40">
               No promotions. No third parties. Unsubscribe in one click.
             </p>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
               Atelier
             </p>
             <address className="mt-5 not-italic text-[14px] leading-[1.85] text-graphite/75">
-              Arvex Atelier
+              Arvex
               <br />
-              Atelier 17, Sirsi Road
+              G-19, Sector 2
               <br />
-              Jaipur 302012, India
+              Noida, UP 201301, India
               <br />
               <a
-                className="mt-3 inline-block text-graphite hover:text-champagne-600"
-                href="mailto:hello@arvex.studio"
+                className="mt-3 inline-block text-graphite hover:text-champagne-600 transition-colors"
+                href="mailto:info@arvexgroup.in"
               >
-                hello@arvex.studio
+                info@arvexgroup.in
               </a>
               <br />
-              <span>+91 98 0000 0000</span>
+              <a
+                className="inline-block text-graphite hover:text-champagne-600 transition-colors"
+                href="tel:+919599075766"
+              >
+                +91 95990 75766
+              </a>
             </address>
           </div>
 
           <div className="lg:col-span-3 lg:col-start-10">
-            <p className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
-              Showrooms
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
+              Presence
             </p>
             <ul className="mt-5 space-y-1.5 text-[14px] leading-[1.85] text-graphite/75">
-              <li>Jaipur · Atelier & showroom</li>
-              <li>Mumbai · BKC, by appointment</li>
-              <li>New Delhi · Khan Market, by appointment</li>
+              <li>Noida · Studio & Workshop</li>
+              <li>Mumbai · by appointment</li>
+              <li>New Delhi · by appointment</li>
               <li>Bengaluru · by appointment</li>
               <li>Hyderabad · by appointment</li>
             </ul>
@@ -60,10 +65,10 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 border-t border-champagne-200/60 py-12 md:grid-cols-5 md:gap-10 md:py-14">
           <Col title="Collection">
             <a href="#collection">All pieces</a>
-            <a href="/?collection=quantum-cascade#collection">Quantum Cascade</a>
-            <a href="/?collection=kinetic-geometry#collection">Kinetic Geometry</a>
-            <a href="/?collection=bio-luminescent#collection">Bio-Luminescent</a>
-            <a href="/?collection=hyper-minimalist#collection">Hyper-Minimalist</a>
+            <a href="/?collection=quantum-cascade#collection">Flowing Crystal</a>
+            <a href="/?collection=kinetic-geometry#collection">Modern Geometric</a>
+            <a href="/?collection=bio-luminescent#collection">Organic Series</a>
+            <a href="/?collection=hyper-minimalist#collection">The Minimalist</a>
           </Col>
           <Col title="Atelier">
             <a href="#craft">The Craft</a>
@@ -76,6 +81,15 @@ export function Footer() {
             <a href="/consultation">Project visits</a>
             <a href="/consultation">White-glove installation</a>
             <a href="mailto:aftercare@arvex.studio">Aftercare</a>
+            <a
+              href={`https://wa.me/919599075766?text=${encodeURIComponent(
+                "Hello Arvex, I would like a private consultation regarding your luxury lighting collection."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consult via WhatsApp
+            </a>
           </Col>
           <Col title="Press">
             <a href="mailto:press@arvex.studio">Media enquiries</a>
@@ -93,7 +107,7 @@ export function Footer() {
           <div className="font-display text-[clamp(3.5rem,18vw,16rem)] leading-none tracking-tight text-graphite">
             Arvex
           </div>
-          <div className="mt-8 flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/45 md:mt-10 md:flex-row md:items-center">
+          <div className="mt-8 flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40 md:mt-10 md:flex-row md:items-center">
             <span>© {new Date().getFullYear()} Arvex Atelier. All rights reserved.</span>
             <span>Hand-built in Jaipur · Numbered editions across India</span>
             <span className="flex gap-6">
@@ -111,7 +125,7 @@ export function Footer() {
 function Col({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+      <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
         {title}
       </p>
       <ul className="space-y-2.5 text-[13px] text-graphite/75">
@@ -133,16 +147,27 @@ function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
 
-  function submit(e: FormEvent) {
+  async function submit(e: FormEvent) {
     e.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("err");
       return;
     }
-    // The atelier journal endpoint is deliberately stubbed —
-    // pipe to Resend or a transactional service in production.
-    setStatus("ok");
-    setEmail("");
+    
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      
+      if (!res.ok) throw new Error();
+      
+      setStatus("ok");
+      setEmail("");
+    } catch (err) {
+      setStatus("err");
+    }
   }
 
   return (
@@ -162,18 +187,18 @@ function NewsletterForm() {
         />
         <button
           type="submit"
-          className="m-1 rounded-full bg-graphite px-6 text-[10px] uppercase tracking-[0.28em] text-ivory transition-colors hover:bg-ink"
+          className="m-1 rounded-full bg-graphite px-6 text-[10px] uppercase tracking-[0.2em] text-ivory transition-colors hover:bg-ink"
         >
           Subscribe
         </button>
       </label>
       {status === "ok" && (
-        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.28em] text-champagne-700">
+        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-champagne-700">
           Thank you. The next letter will arrive at the start of the season.
         </p>
       )}
       {status === "err" && (
-        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.28em] text-rose-700">
+        <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-rose-700">
           Please enter a valid email address.
         </p>
       )}

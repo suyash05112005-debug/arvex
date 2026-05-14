@@ -11,7 +11,7 @@ import { getProduct } from "@/data/products";
  * the atelier story — gives first-time visitors a "look at this one" moment
  * before they meet the full collection.
  */
-export function FeaturedPiece({ slug = "aurora-veil" }: { slug?: string }) {
+export function FeaturedPiece({ slug = "aurora" }: { slug?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -152,8 +152,8 @@ export function FeaturedPiece({ slug = "aurora-veil" }: { slug?: string }) {
               <div
                 className={
                   product.images.hero
-                    ? "absolute bottom-6 left-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-ivory/90 drop-shadow"
-                    : "absolute bottom-6 left-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-graphite/65"
+                    ? "absolute bottom-6 left-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ivory/90 drop-shadow"
+                    : "absolute bottom-6 left-6 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/60"
                 }
               >
                 <span className="h-px w-8 bg-champagne-500" />
@@ -171,13 +171,13 @@ export function FeaturedPiece({ slug = "aurora-veil" }: { slug?: string }) {
             className="lg:col-span-5 lg:pt-12"
           >
             <p className="eyebrow mb-10 text-graphite/65">Signature · Volume IV</p>
-            <h2 className="font-display text-[clamp(2.8rem,5.6vw,5rem)] leading-[1] tracking-[-0.022em] text-graphite">
+            <h2 className="font-display text-[clamp(2.8rem,5.6vw,5rem)] leading-[1.06] tracking-[-0.018em] text-graphite">
               {product.name}
             </h2>
             <p className="mt-8 max-w-[520px] font-display text-[26px] italic leading-[1.25] text-graphite/70 md:text-[28px]">
               {product.tagline}
             </p>
-            <p className="mt-9 max-w-[520px] text-[16px] leading-[1.78] text-graphite/65 md:text-[17px]">
+            <p className="mt-9 max-w-[520px] text-[15px] leading-[1.8] text-graphite/60 md:text-[16px]">
               {product.description}
             </p>
 
@@ -214,7 +214,7 @@ export function FeaturedPiece({ slug = "aurora-veil" }: { slug?: string }) {
 function SpecRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="grid grid-cols-3 gap-4 py-5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
         {label}
       </dt>
       <dd className="col-span-2 font-sans text-[15px] leading-[1.55] text-graphite">

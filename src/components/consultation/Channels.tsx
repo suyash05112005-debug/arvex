@@ -14,19 +14,19 @@ const CHANNELS: Channel[] = [
     eyebrow: "WhatsApp",
     title: "Message the atelier directly",
     body: "Quick brief, room photographs, sketches — send them over and a senior member of the atelier will reply within the working day.",
-    cta: { label: "Open WhatsApp →", href: "https://wa.me/919800000000" },
+    cta: { label: "Consult via WhatsApp →", href: "https://wa.me/919599075766?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection." },
   },
   {
     eyebrow: "Showroom",
     title: "Private appointments",
-    body: "Visit the atelier in Jaipur or our showroom appointments in Mumbai (BKC), New Delhi (Khan Market), Bengaluru, and Hyderabad. By appointment only.",
+    body: "Visit the studio and workshop in Noida. For clients outside NCR, we arrange private viewings by appointment in Mumbai, Bengaluru, and Hyderabad.",
     cta: { label: "Request an appointment →", href: "#enquire" },
   },
   {
     eyebrow: "Trade",
     title: "Architect & designer collaboration",
-    body: "Trade pricing, technical drawings, IES files, on-site consultation, and shared moodboards. We work alongside studios across India and the GCC.",
-    cta: { label: "trade@arvex.studio →", href: "mailto:trade@arvex.studio" },
+    body: "Trade pricing, technical drawings, IES files, on-site consultation, and shared moodboards. We work alongside studios across India.",
+    cta: { label: "info@arvexgroup.in →", href: "mailto:info@arvexgroup.in" },
   },
   {
     eyebrow: "Video",
@@ -51,6 +51,24 @@ export function ConsultationChannels() {
               The atelier responds within 24 hours, by whichever channel
               suits you. All initial consultations are at no charge.
             </p>
+            
+            <div className="mt-14 hidden lg:block pr-12">
+              <div className="overflow-hidden rounded-sm ring-1 ring-graphite/10 shadow-editorial bg-ivory">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3503.7915609653155!2d77.31502447605995!3d28.57591877569566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45145b0a7db%3A0xc47e33dc9e5f039a!2sG-19%2C%20Sector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0, filter: "grayscale(0.6) opacity(0.9) contrast(1.1)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Arvex Studio Location"
+                />
+              </div>
+              <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/60">
+                G-19, Sector 2 · Noida, UP
+              </div>
+            </div>
           </div>
 
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-2">
@@ -65,7 +83,7 @@ export function ConsultationChannels() {
                   className="group py-8 first:pt-0 last:pb-0"
                 >
                   <div className="flex items-baseline justify-between">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                       {c.eyebrow}
                     </span>
                   </div>
@@ -78,7 +96,7 @@ export function ConsultationChannels() {
                   <a
                     href={c.cta.href}
                     {...(c.cta.href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
-                    className="mt-4 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.32em] text-graphite transition-colors hover:text-champagne-600"
+                    className="mt-4 inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
                   >
                     <span className="h-px w-6 bg-champagne-400 transition-all group-hover:w-12" />
                     {c.cta.label}
@@ -86,6 +104,24 @@ export function ConsultationChannels() {
                 </motion.li>
               ))}
             </ul>
+            
+            <div className="mt-16 block lg:hidden">
+              <div className="overflow-hidden rounded-sm ring-1 ring-graphite/10 shadow-editorial bg-ivory">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3503.7915609653155!2d77.31502447605995!3d28.57591877569566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45145b0a7db%3A0xc47e33dc9e5f039a!2sG-19%2C%20Sector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="240"
+                  style={{ border: 0, filter: "grayscale(0.6) opacity(0.9) contrast(1.1)" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Arvex Studio Location"
+                />
+              </div>
+              <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/60">
+                G-19, Sector 2 · Noida, UP
+              </div>
+            </div>
           </div>
         </div>
       </div>

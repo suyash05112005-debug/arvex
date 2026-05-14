@@ -37,26 +37,26 @@ export function Gallery() {
         <div className="mb-14 flex flex-col items-start gap-8 md:mb-28 md:flex-row md:items-end md:justify-between md:gap-10">
           <div className="max-w-2xl">
             <p className="eyebrow mb-7 text-graphite/65 md:mb-10">The Collection</p>
-            <h2 className="font-display text-[clamp(2.1rem,5vw,4.4rem)] leading-[1.04] tracking-[-0.012em] text-graphite md:leading-[1.02]">
+            <h2 className="font-display text-[clamp(2.1rem,5vw,4.4rem)] leading-[1.08] tracking-[-0.012em] text-graphite md:leading-[1.06]">
               Twenty pieces.{" "}
               <span className="text-iridescent">Four collections.</span>{" "}
               Made one at a time.
             </h2>
-            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.7] text-graphite/65 md:mt-8 md:text-[18px] md:leading-[1.78]">
-              Every Arvex chandelier is hand-built to order in our Jaipur atelier.
+            <p className="mt-6 max-w-[560px] text-[15px] leading-[1.75] text-graphite/60 md:mt-8 md:text-[17px] md:leading-[1.8]">
+              Every Arvex chandelier is hand-built to order in our Noida studio.
               Browse the current edition, request a private consultation, or commission
               a piece tailored to your architecture.
             </p>
           </div>
 
           {/* Filter rail */}
-          <div className="-mx-6 flex gap-2 self-stretch overflow-x-auto px-6 pb-1 md:mx-0 md:flex-wrap md:self-end md:overflow-visible md:px-0 md:pb-0">
+          <div className="-mx-6 flex gap-2 self-stretch overflow-x-auto no-scrollbar px-6 pb-1 md:mx-0 md:flex-wrap md:self-end md:overflow-visible md:px-0 md:pb-0">
             {FILTERS.map((f) => (
               <button
                 key={f.id}
                 onClick={() => setFilter(f.id)}
                 className={cn(
-                  "relative shrink-0 rounded-full px-4 py-2.5 text-[10px] uppercase tracking-[0.24em] font-medium transition-all duration-500 md:px-5 md:tracking-[0.28em]",
+                  "relative shrink-0 rounded-full px-4 py-2.5 text-[10px] uppercase tracking-[0.18em] font-medium transition-all duration-500 md:px-5 md:tracking-[0.2em]",
                   filter === f.id
                     ? "bg-graphite text-ivory"
                     : "border border-graphite/15 text-graphite/65 hover:text-graphite hover:border-champagne-400"
@@ -80,13 +80,13 @@ export function Gallery() {
 
         {/* Footer hairline + count */}
         <div className="mt-16 flex flex-col items-start gap-4 md:mt-28 md:flex-row md:items-center md:gap-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/40">
             {String(items.length).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")} pieces
           </span>
           <div className="h-px w-full flex-1 bg-champagne-200" />
           <a
             href="#enquire"
-            className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite transition-colors hover:text-champagne-600"
+            className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
           >
             Commission a bespoke piece →
           </a>

@@ -26,7 +26,7 @@ const STEPS: Step[] = [
   },
   {
     n: "03",
-    title: "Hand Build, Jaipur",
+    title: "Hand Build, Noida",
     body:
       "Each piece is cut, polished, wired, and assembled by a single maker, who signs and numbers it. Photographs are sent through every stage of build.",
     duration: "8–14 weeks",
@@ -56,7 +56,7 @@ export function Craftsmanship() {
           </div>
           <div className="lg:col-span-6 lg:col-start-7 lg:pt-2">
             <p className="max-w-[580px] text-[17px] leading-[1.78] text-graphite/65 md:text-[18px]">
-              Every Arvex piece passes through four stages, all in our Jaipur atelier.
+              Every Arvex piece passes through four stages, all in our Noida studio.
               No outsourcing, no white-label assembly. The same team draws, cuts, builds,
               and installs — which is why each piece can be signed by the maker and why
               we can stand behind every fixture for the lifetime of the building.
@@ -81,10 +81,10 @@ export function Craftsmanship() {
             >
               {/* Step number */}
               <div className="flex items-baseline justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                   Stage {s.n}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/45">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/45">
                   {s.duration}
                 </span>
               </div>
@@ -107,7 +107,7 @@ export function Craftsmanship() {
               {/* Hairline footer */}
               <div className="mt-10 flex items-center gap-3">
                 <span className="h-px w-6 bg-champagne-400 transition-all duration-500 group-hover:w-12" />
-                <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/55">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/55">
                   {i === STEPS.length - 1 ? "Hand-over" : "Continues to next stage"}
                 </span>
               </div>
@@ -117,13 +117,13 @@ export function Craftsmanship() {
 
         {/* Footnote */}
         <div className="mt-14 flex items-center gap-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/45">
             Total — 12 to 22 weeks, atelier to ceiling
           </span>
           <div className="h-px flex-1 bg-champagne-200" />
           <a
             href="#enquire"
-            className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite transition-colors hover:text-champagne-600"
+            className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
           >
             Begin your consultation →
           </a>

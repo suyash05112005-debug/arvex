@@ -37,39 +37,39 @@ export const CATEGORIES: { id: Category; name: string; description: string }[] =
   [
     {
       id: "quantum-cascade",
-      name: "The Cascade",
+      name: "Flowing Crystal",
       description:
-        "Flowing crystal cascades on champagne-brass armatures — built for double-height foyers, grand staircases, and atrium spaces.",
+        "Luminous cascades of hand-cut crystal and champagne-brass. Glamorous, atmospheric lighting for grand Indian residences.",
     },
     {
       id: "kinetic-geometry",
-      name: "Kinetic Geometry",
+      name: "Modern Geometric",
       description:
-        "Modular, articulated forms with quiet moving members. Architectural orreries that shift light through the day.",
+        "Balanced, spatial forms with contemporary luxury at their core. Architectural precision meeting the warmth of home.",
     },
     {
       id: "bio-luminescent",
-      name: "Organic Forms",
+      name: "Organic Series",
       description:
-        "Sculptural, hand-blown silhouettes lit from within — coral, lotus, and floral references rendered in glass and porcelain.",
+        "Soft, emotional silhouettes inspired by nature. Artistic glass and porcelain forms that feel collectible and timeless.",
     },
     {
       id: "hyper-minimalist",
-      name: "The Minimal Series",
+      name: "The Minimalist",
       description:
-        "Almost-invisible structures of light. The architecture of a room, distilled to a single line or plane.",
+        "Clean, sculptural structures of light. The architecture of a room, distilled to its most essential, timeless line.",
     },
   ];
 
 const PRODUCTS_BASE: Omit<Product, "images">[] = [
   // QUANTUM CASCADE
   {
-    slug: "aurora-veil",
-    name: "Aurora Veil",
+    slug: "aurora",
+    name: "Aurora",
     category: "quantum-cascade",
     tagline: "A waterfall of crystal, in champagne brass.",
     description:
-      "Aurora Veil suspends 1,184 hand-cut crystal pendants along a curved champagne-brass spine. A dimmable warm-white core lets the piece ripple from soft candlelight to a clear evening glow, controllable by app or wall dimmer.",
+      "Aurora suspends 1,184 hand-cut crystal pendants along a curved champagne-brass spine. A dimmable warm-white core lets the piece ripple from soft candlelight to a clear evening glow, controllable by app or wall dimmer.",
     materials: ["Champagne brass", "Hand-cut crystal", "Warm-white LED core"],
     diameterCm: 90,
     heightCm: 240,
@@ -83,12 +83,12 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "stratus-fall",
-    name: "Stratus Fall",
+    slug: "cascade",
+    name: "Cascade",
     category: "quantum-cascade",
-    tagline: "Weather, captured indoors.",
+    tagline: "A pillar of atmospheric light.",
     description:
-      "A 3.2-metre vertical column of refractive crystal rods, internally lit by a slow-pulsing core. Stratus Fall slows the eye like a snowstorm seen from a warm room.",
+      "A 3.2-metre vertical column of refractive crystal rods, internally lit by a slow-pulsing core. Cascade slows the eye like a snowstorm seen from a warm room.",
     materials: ["Optical crystal", "Brushed titanium", "RGB-W core"],
     diameterCm: 60,
     heightCm: 320,
@@ -102,12 +102,12 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "halo-mercury",
-    name: "Halo Mercury",
+    slug: "celeste",
+    name: "Celeste",
     category: "quantum-cascade",
     tagline: "Liquid light, frozen mid-fall.",
     description:
-      "Mercury-finished blown-glass spheres cascade along a parametric curve. Internal fiber-optic threads thread through every sphere, creating the illusion of trapped liquid light.",
+      "Bespoke mercury-finished blown-glass spheres cascade along a parametric curve. Internal fiber-optic threads thread through every sphere, creating the illusion of trapped liquid light.",
     materials: ["Mercury-blown glass", "Polished steel", "Fiber optics"],
     diameterCm: 110,
     heightCm: 200,
@@ -121,8 +121,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "photon-rain",
-    name: "Photon Rain",
+    slug: "vesper",
+    name: "Vesper",
     category: "quantum-cascade",
     tagline: "1,000 quiet points of light.",
     description:
@@ -140,8 +140,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "fjord-cascade",
-    name: "Fjord Cascade",
+    slug: "opal",
+    name: "Opal",
     category: "quantum-cascade",
     tagline: "Glacial water, suspended.",
     description:
@@ -160,8 +160,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
   },
   // KINETIC GEOMETRY
   {
-    slug: "axis-mundi",
-    name: "Axis Mundi",
+    slug: "axis",
+    name: "Axis",
     category: "kinetic-geometry",
     tagline: "A constellation that turns, slowly.",
     description:
@@ -179,8 +179,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "origami-nebula",
-    name: "Origami Nebula",
+    slug: "nova",
+    name: "Nova",
     category: "kinetic-geometry",
     tagline: "A folded sky.",
     description:
@@ -198,8 +198,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "tessera-lift",
-    name: "Tessera Lift",
+    slug: "eclipse",
+    name: "Eclipse",
     category: "kinetic-geometry",
     tagline: "Architecture, levitating.",
     description:
@@ -217,12 +217,12 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "spire-helix",
-    name: "Spire Helix",
+    slug: "obsidian",
+    name: "Obsidian",
     category: "kinetic-geometry",
-    tagline: "Two strands, one rotation.",
+    tagline: "A rhythmic spiral of light.",
     description:
-      "A two-metre double-helix structure that rotates through one full turn over twelve hours, marking the day in light.",
+      "A two-metre double-helix structure that rotates through one full turn over twelve hours, marking the passage of time in light.",
     materials: ["Brushed titanium", "Glass capsule", "Programmable LED"],
     diameterCm: 70,
     heightCm: 200,
@@ -236,8 +236,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "lattice-bloom",
-    name: "Lattice Bloom",
+    slug: "verona",
+    name: "Verona",
     category: "kinetic-geometry",
     tagline: "A flower of polished steel.",
     description:
@@ -256,12 +256,12 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
   },
   // BIO-LUMINESCENT
   {
-    slug: "medusa-bloom",
-    name: "Medusa Bloom",
+    slug: "mira",
+    name: "Mira",
     category: "bio-luminescent",
-    tagline: "A jellyfish, suspended for the dining room.",
+    tagline: "A luminous marine silhouette.",
     description:
-      "Hand-blown silicate domes drape around a luminous core, simulating the slow pulse of a deep-sea siphonophore.",
+      "Hand-blown silicate domes drape around a luminous core, simulating the slow, rhythmic pulse of deep-sea life.",
     materials: ["Silicate glass", "Soft silicone tendrils", "Bio-warm LED"],
     diameterCm: 95,
     heightCm: 175,
@@ -275,8 +275,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "coral-aria",
-    name: "Coral Aria",
+    slug: "solis",
+    name: "Solis",
     category: "bio-luminescent",
     tagline: "A reef, captured in glass.",
     description:
@@ -294,8 +294,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "lichen-glow",
-    name: "Lichen Glow",
+    slug: "aura",
+    name: "Aura",
     category: "bio-luminescent",
     tagline: "Forest after rain.",
     description:
@@ -313,12 +313,12 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "abyssal-orb",
-    name: "Abyssal Orb",
+    slug: "elara",
+    name: "Elara",
     category: "bio-luminescent",
-    tagline: "What lives where light does not.",
+    tagline: "A core of bioluminescent warmth.",
     description:
-      "A 75 cm sphere with a translucent shell that hides a slow internal storm — a homage to deep-sea bioluminescence.",
+      "A 75 cm sphere with a translucent shell that hides a slow internal storm — a minimalist homage to deep-sea bioluminescence.",
     materials: ["Translucent polymer", "Internal LED grid", "Steel suspension"],
     diameterCm: 75,
     heightCm: 75,
@@ -332,8 +332,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "petal-quiet",
-    name: "Petal Quiet",
+    slug: "silhouette",
+    name: "Silhouette",
     category: "bio-luminescent",
     tagline: "A bloom that listens.",
     description:
@@ -352,8 +352,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
   },
   // HYPER-MINIMALIST
   {
-    slug: "monolith-thin",
-    name: "Monolith Thin",
+    slug: "meridian",
+    name: "Meridian",
     category: "hyper-minimalist",
     tagline: "A line of light, nothing else.",
     description:
@@ -371,8 +371,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "halo-zero",
-    name: "Halo Zero",
+    slug: "halo",
+    name: "Halo",
     category: "hyper-minimalist",
     tagline: "A perfect ring, holding nothing.",
     description:
@@ -390,8 +390,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "field-grid",
-    name: "Field Grid",
+    slug: "horizon",
+    name: "Horizon",
     category: "hyper-minimalist",
     tagline: "A constellation, on a plane.",
     description:
@@ -409,8 +409,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "vertex-pure",
-    name: "Vertex Pure",
+    slug: "arc",
+    name: "Arc",
     category: "hyper-minimalist",
     tagline: "A single point, suspended.",
     description:
@@ -428,8 +428,8 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
     ],
   },
   {
-    slug: "void-arc",
-    name: "Void Arc",
+    slug: "lumiere",
+    name: "Lumiere",
     category: "hyper-minimalist",
     tagline: "An arc of light. The wall behind, gone.",
     description:

@@ -82,16 +82,16 @@ export function ConsultationProcess() {
             >
               {/* Mobile header row: number + duration on the same line */}
               <div className="col-span-12 flex items-center justify-between md:hidden">
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                   Stage {s.n}
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/55">
                   {s.duration}
                 </span>
               </div>
 
               {/* Desktop number cell */}
-              <span className="hidden md:col-span-1 md:inline font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+              <span className="hidden md:col-span-1 md:inline font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                 {s.n}
               </span>
               <div className="col-span-12 md:col-span-5">
@@ -103,7 +103,7 @@ export function ConsultationProcess() {
                 {s.body}
               </p>
               {/* Desktop duration cell */}
-              <span className="hidden md:col-span-1 md:col-start-12 md:inline text-right font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/55">
+              <span className="hidden md:col-span-1 md:col-start-12 md:inline text-right font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/55">
                 {s.duration}
               </span>
             </motion.li>
@@ -111,13 +111,13 @@ export function ConsultationProcess() {
         </ol>
 
         <div className="mt-12 flex flex-col items-start gap-4 md:mt-14 md:flex-row md:items-center md:gap-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite/45">
+          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/45">
             Total · 12 to 22 weeks, atelier to ceiling
           </span>
           <div className="hidden h-px flex-1 bg-champagne-200 md:block" />
           <a
             href="#enquire"
-            className="font-mono text-[10px] uppercase tracking-[0.32em] text-graphite transition-colors hover:text-champagne-600"
+            className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
           >
             Begin a consultation →
           </a>

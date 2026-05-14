@@ -123,8 +123,8 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           <div
             className={
               product.images.hero
-                ? "pointer-events-none absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.32em] text-ivory/85 drop-shadow"
-                : "pointer-events-none absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.32em] text-graphite/55"
+                ? "pointer-events-none absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.22em] text-ivory/85 drop-shadow"
+                : "pointer-events-none absolute left-5 top-5 font-mono text-[9px] uppercase tracking-[0.22em] text-graphite/50"
             }
           >
             № {String(index + 1).padStart(2, "0")}
@@ -134,8 +134,8 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
           <div
             className={
               product.images.hero
-                ? "pointer-events-none absolute right-5 bottom-5 flex translate-y-1 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-ivory/90 opacity-0 transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
-                : "pointer-events-none absolute right-5 bottom-5 flex translate-y-1 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.28em] text-graphite/65 opacity-0 transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100"
+                ? "pointer-events-none absolute right-5 bottom-5 flex translate-y-1 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-ivory/90 opacity-0 transition-all duration-700 ease-luxury group-hover:translate-y-0 group-hover:opacity-100"
+                : "pointer-events-none absolute right-5 bottom-5 flex translate-y-1 items-center gap-2 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/60 opacity-0 transition-all duration-700 ease-luxury group-hover:translate-y-0 group-hover:opacity-100"
             }
           >
             <span className="h-px w-5 bg-champagne-500" />
@@ -153,7 +153,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
               {product.tagline}
             </p>
           </div>
-          <span className="shrink-0 pt-1 font-mono text-[9px] uppercase tracking-[0.26em] text-champagne-600 md:pt-1.5 md:text-[10px] md:tracking-[0.28em]">
+          <span className="shrink-0 pt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-champagne-600 md:pt-1.5 md:text-[10px] md:tracking-[0.22em]">
             {product.edition}
           </span>
         </div>
@@ -161,7 +161,7 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
         {/* Materials — quiet luxury detail line */}
         <div className="mt-3 flex items-center gap-3 md:mt-3.5">
           <span className="h-px w-6 bg-champagne-300 transition-all duration-500 group-hover:w-12 group-hover:bg-champagne-500 md:w-7" />
-          <span className="font-mono text-[9px] uppercase tracking-[0.24em] text-graphite/50 md:text-[10px] md:tracking-[0.26em]">
+          <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-graphite/45 md:text-[10px] md:tracking-[0.2em]">
             {product.materials.slice(0, 2).join(" · ")}
           </span>
         </div>

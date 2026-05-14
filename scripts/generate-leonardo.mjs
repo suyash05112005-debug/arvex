@@ -258,10 +258,10 @@ function publicPath(filename) {
 // other gallery anchors get a hero only. ~7 generations ≈ 60 credits, well
 // inside a $5 budget while still transforming the visible hero of the site.
 const CURATED_PLAN = {
-  "aurora-veil": ["hero", "detail", "context", "ortho"],
-  "axis-mundi": ["hero"],
-  "halo-mercury": ["hero"],
-  "monolith-thin": ["hero"],
+  "aurora": ["hero", "detail", "context", "ortho"],
+  "axis": ["hero"],
+  "celeste": ["hero"],
+  "meridian": ["hero"],
 };
 
 async function main() {

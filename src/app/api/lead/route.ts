@@ -53,6 +53,7 @@ export async function POST(req: Request) {
     string | undefined
   >;
 
+  // Basic validation
   if (!name || typeof name !== "string" || name.trim().length < 2) {
     return NextResponse.json({ error: "Name is required" }, { status: 400 });
   }
@@ -61,9 +62,6 @@ export async function POST(req: Request) {
   }
   if (!projectType || typeof projectType !== "string") {
     return NextResponse.json({ error: "Project type is required" }, { status: 400 });
-  }
-  if (name.length > 200 || (message?.length ?? 0) > 5000) {
-    return NextResponse.json({ error: "Field too long" }, { status: 400 });
   }
 
   const lead: Lead = {
@@ -80,11 +78,47 @@ export async function POST(req: Request) {
   };
 
   try {
-    const leads = await readLeads();
-    leads.push(lead);
-    await writeLeads(leads);
+    // 1. Save locally for backup (note: will only work in environments with persistent FS)
+    try {
+      const leads = await readLeads();
+      leads.push(lead);
+      await writeLeads(leads);
+    } catch (e) {
+      console.warn("[arvex] Local lead-write failed (expected in some serverless environments)", e);
+    }
 
-    // In production, swap this for a transactional email send (Resend / SendGrid).
+    // 2. Forward to Formspree if configured
+    const formspreeId = process.env.FORMSPREE_ID;
+    if (formspreeId) {
+      const formspreeRes = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: lead.name,
+          email: lead.email,
+          phone: lead.phone,
+          company: lead.company,
+          project_type: lead.projectType,
+          message: lead.message,
+          _subject: `New Lead: ${lead.name} (${lead.projectType})`,
+          _metadata: {
+            id: lead.id,
+            userAgent: lead.userAgent,
+          },
+        }),
+      });
+
+      if (!formspreeRes.ok) {
+        const errData = await formspreeRes.json().catch(() => ({}));
+        console.error("[arvex] Formspree submission failed", errData);
+        // We continue anyway since we saved it locally (or at least tried)
+      }
+    }
+
+    // 3. Optional console notification
     if (process.env.LEAD_NOTIFY_EMAIL) {
       console.log(`[arvex] new lead → notify ${process.env.LEAD_NOTIFY_EMAIL}`, lead);
     } else {
@@ -93,7 +127,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true, id: lead.id });
   } catch (e) {
-    console.error("[arvex] lead-write failed", e);
-    return NextResponse.json({ error: "Could not save lead" }, { status: 500 });
+    console.error("[arvex] Lead processing failed", e);
+    return NextResponse.json({ error: "Could not process lead" }, { status: 500 });
   }
 }

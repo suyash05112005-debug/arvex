@@ -106,8 +106,9 @@ body::before {
 
   .btn-primary {
     @apply relative inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5
-      text-[12px] uppercase tracking-[0.22em] font-medium
-      text-ivory transition-all duration-500;
+      text-[11.5px] uppercase tracking-[0.18em] font-medium
+      text-ivory;
+    transition: all 0.7s cubic-bezier(0.3, 0.8, 0.2, 1);
     background: linear-gradient(180deg, #1f1b16 0%, #0e0b07 100%);
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08) inset,
@@ -122,8 +123,9 @@ body::before {
 
   .btn-ghost {
     @apply relative inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5
-      text-[12px] uppercase tracking-[0.22em] font-medium
-      text-graphite transition-all duration-500;
+      text-[11.5px] uppercase tracking-[0.18em] font-medium
+      text-graphite;
+    transition: all 0.7s cubic-bezier(0.3, 0.8, 0.2, 1);
     border: 1px solid rgba(31, 27, 22, 0.18);
   }
   .btn-ghost:hover {
@@ -132,15 +134,15 @@ body::before {
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.36em]
+    @apply inline-flex items-center gap-3 text-[10.5px] uppercase tracking-[0.24em]
       text-champagne-600 font-medium;
   }
   .eyebrow::before {
     content: "";
-    width: 28px;
+    width: 24px;
     height: 1px;
     background: currentColor;
-    opacity: 0.55;
+    opacity: 0.45;
   }
 
   /* Soft champagne glow — used sparingly behind hero copy and form panels. */
@@ -206,11 +208,24 @@ body::before {
       transparent 100%
     );
   }
+
+  /* Mobile refinements */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 1.5rem);
+  }
 }
 
 /* Refined easing curve, reusable inline via [transition-timing-function] arbitrary. */
 .ease-luxury {
-  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-timing-function: cubic-bezier(0.3, 0.8, 0.2, 1);
 }
 
 /* Reduce motion respect */

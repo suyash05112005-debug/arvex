@@ -68,7 +68,7 @@ export function ConsultationServices() {
               transition={{ duration: 1, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="group relative bg-ivory p-9 transition-colors duration-700 hover:bg-porcelain"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-champagne-600">
+              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-champagne-600">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="mt-6 font-display text-[24px] leading-[1.15] tracking-tight text-graphite">
