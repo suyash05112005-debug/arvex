@@ -42,15 +42,18 @@ export const metadata: Metadata = {
   description:
     "Arvex is a Noida-based studio of bespoke chandeliers and architectural lighting. Hand-built, signed, and numbered for private residences, hospitality projects, and luxury commercial interiors across India.",
   keywords: [
-    "luxury chandelier India",
-    "bespoke chandelier",
+    "Luxury Chandeliers",
+    "Premium Lighting",
+    "Designer Lights",
+    "Luxury Interior Lighting",
+    "Modern Chandeliers",
+    "Decorative Lighting",
+    "Luxury Home Decor",
+    "Noida Luxury Lighting",
+    "Premium Interior Solutions",
+    "bespoke chandelier India",
     "hand-made chandelier Noida",
-    "architectural lighting India",
-    "luxury lighting designer",
-    "custom chandelier for villas",
-    "banquet hall chandelier",
-    "interior designer lighting",
-    "Arvex",
+    "Arvex Atelier",
   ],
   openGraph: {
     type: "website",
@@ -60,12 +63,21 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Arvex",
     locale: "en_IN",
+    images: [
+      {
+        url: "/assets/products/generated/aurora-veil-context.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Arvex Atelier — Luxury Chandeliers & Bespoke Lighting",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Arvex — Hand-Built Luxury Chandeliers, Made in India",
     description:
       "Bespoke chandeliers, hand-built in our Noida studio. Numbered editions, signed by the maker, delivered with white-glove installation across India.",
+    images: ["/assets/products/generated/aurora-veil-context.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },

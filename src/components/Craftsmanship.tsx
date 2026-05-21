@@ -121,12 +121,12 @@ export function Craftsmanship() {
             Total — 12 to 22 weeks, atelier to ceiling
           </span>
           <div className="h-px flex-1 bg-champagne-200" />
-          <a
-            href="#enquire"
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-consultation-modal'))}
             className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
           >
             Begin your consultation →
-          </a>
+          </button>
         </div>
       </div>
     </section>

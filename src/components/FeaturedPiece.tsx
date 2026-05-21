@@ -200,9 +200,15 @@ export function FeaturedPiece({ slug = "aurora" }: { slug?: string }) {
                 Discover {product.name}
                 <span aria-hidden>→</span>
               </Link>
-              <a href="#enquire" className="btn-ghost">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-consultation-modal'));
+                }}
+                className="btn-ghost"
+              >
                 Enquire about this piece
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>

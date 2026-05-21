@@ -79,7 +79,7 @@ export function ConsultationHero({ heroSrc }: { heroSrc: string }) {
             <span aria-hidden>→</span>
           </a>
           <a
-            href="https://wa.me/919800000000"
+            href="https://wa.me/917428690215?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection."
             target="_blank"
             rel="noreferrer"
             className="btn-ghost"

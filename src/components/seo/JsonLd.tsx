@@ -14,37 +14,79 @@ function Script({ data }: { data: Record<string, unknown> }) {
 
 export function OrganizationJsonLd() {
   return (
-    <Script
-      data={{
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Arvex",
-        legalName: "Arvex Atelier",
-        url: SITE_URL,
-        logo: `${SITE_URL}/logo.svg`,
-        description:
-          "Hand-built bespoke chandeliers and architectural lighting — made one at a time in our Noida studio for private residences, hospitality projects, and luxury commercial interiors across India.",
-        sameAs: [],
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "IN",
-          addressRegion: "UP",
-          addressLocality: "Noida",
-          postalCode: "201301",
-          streetAddress: "G-19, Noida Sector 3",
-        },
-        contactPoint: [
-          {
-            "@type": "ContactPoint",
-            telephone: "+91-95990-75766",
-            email: "info@arvexgroup.in",
-            contactType: "customer support",
-            areaServed: "IN",
-            availableLanguage: ["en", "hi"],
+    <>
+      <Script
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Arvex",
+          legalName: "Arvex Atelier",
+          url: SITE_URL,
+          logo: `${SITE_URL}/logo.svg`,
+          description:
+            "Hand-built bespoke chandeliers and architectural lighting — made one at a time in our Noida studio for private residences, hospitality projects, and luxury commercial interiors across India.",
+          sameAs: ["https://www.instagram.com/arvexgroups/?hl=en"],
+          address: {
+            "@type": "PostalAddress",
+            addressCountry: "IN",
+            addressRegion: "UP",
+            addressLocality: "Noida",
+            postalCode: "201301",
+            streetAddress: "G-19, Noida Sector 3",
           },
-        ],
-      }}
-    />
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              telephone: "+91-74286-90215",
+              email: "info@arvexgroup.in",
+              contactType: "customer support",
+              areaServed: "IN",
+              availableLanguage: ["en", "hi"],
+            },
+          ],
+        }}
+      />
+      <Script
+        data={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Arvex Atelier",
+          image: `${SITE_URL}/logo.svg`,
+          "@id": `${SITE_URL}/#localbusiness`,
+          url: SITE_URL,
+          telephone: "+91-74286-90215",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "G-19, Noida Sector 3",
+            addressLocality: "Noida",
+            addressRegion: "UP",
+            postalCode: "201301",
+            addressCountry: "IN",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 28.5759,
+            longitude: 77.3150
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            opens: "10:00",
+            closes: "19:00"
+          },
+          sameAs: [
+            "https://www.instagram.com/arvexgroups/?hl=en"
+          ]
+        }}
+      />
+    </>
   );
 }
 

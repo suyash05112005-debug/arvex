@@ -40,9 +40,9 @@ export function Footer() {
               <br />
               <a
                 className="inline-block text-graphite hover:text-champagne-600 transition-colors"
-                href="tel:+919599075766"
+                href="tel:+917428690215"
               >
-                +91 95990 75766
+                +91 74286 90215
               </a>
             </address>
           </div>
@@ -72,8 +72,8 @@ export function Footer() {
           </Col>
           <Col title="Atelier">
             <a href="#craft">The Craft</a>
-            <a href="#enquire">Bespoke commissions</a>
-            <a href="#enquire">Architectural integration</a>
+            <a href="#enquire" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('open-consultation-modal')); }}>Bespoke commissions</a>
+            <a href="#enquire" onClick={(e) => { e.preventDefault(); window.dispatchEvent(new Event('open-consultation-modal')); }}>Architectural integration</a>
             <a href="#recognition">Recognition</a>
           </Col>
           <Col title="Service">
@@ -82,7 +82,7 @@ export function Footer() {
             <a href="/consultation">White-glove installation</a>
             <a href="mailto:aftercare@arvex.studio">Aftercare</a>
             <a
-              href={`https://wa.me/919599075766?text=${encodeURIComponent(
+              href={`https://wa.me/917428690215?text=${encodeURIComponent(
                 "Hello Arvex, I would like a private consultation regarding your luxury lighting collection."
               )}`}
               target="_blank"

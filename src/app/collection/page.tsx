@@ -3,9 +3,10 @@ import { Gallery } from "@/components/Gallery";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
 
 export const metadata: Metadata = {
-  title: "The Collection",
+  title: "Luxury Chandeliers & Premium Designer Lighting | The Collection",
   description:
-    "Explore the full collection of Arvex bespoke lighting and architectural masterpieces.",
+    "Explore the complete Arvex Collection of luxury chandeliers, modern pendant lights, and architectural lighting installations. Hand-built in India for elite residential and hospitality projects.",
+  alternates: { canonical: "/collection" },
 };
 
 export default function CollectionPage() {

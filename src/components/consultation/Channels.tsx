@@ -14,7 +14,7 @@ const CHANNELS: Channel[] = [
     eyebrow: "WhatsApp",
     title: "Message the atelier directly",
     body: "Quick brief, room photographs, sketches — send them over and a senior member of the atelier will reply within the working day.",
-    cta: { label: "Consult via WhatsApp →", href: "https://wa.me/919599075766?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection." },
+    cta: { label: "Consult via WhatsApp →", href: "https://wa.me/917428690215?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection." },
   },
   {
     eyebrow: "Showroom",
@@ -60,7 +60,7 @@ export function ConsultationChannels() {
                 </div>
                 <div>
                   <span className="block text-champagne-600 mb-2 text-[9px] tracking-[0.22em]">Direct</span>
-                  <a href="tel:+919599075766" className="block hover:text-champagne-600 transition-colors mt-1">+91 95990 75766</a>
+                  <a href="tel:+917428690215" className="block hover:text-champagne-600 transition-colors mt-1">+91 74286 90215</a>
                   <a href="mailto:info@arvexgroup.in" className="block hover:text-champagne-600 transition-colors mt-1">info@arvexgroup.in</a>
                 </div>
                 <div className="pt-2">

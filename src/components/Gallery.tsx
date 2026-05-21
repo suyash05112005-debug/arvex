@@ -84,12 +84,12 @@ export function Gallery() {
             {String(items.length).padStart(2, "0")} / {String(PRODUCTS.length).padStart(2, "0")} pieces
           </span>
           <div className="h-px w-full flex-1 bg-champagne-200" />
-          <a
-            href="#enquire"
+          <button
+            onClick={() => window.dispatchEvent(new Event('open-consultation-modal'))}
             className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite transition-colors hover:text-champagne-600"
           >
             Commission a bespoke piece →
-          </a>
+          </button>
         </div>
       </div>
     </section>
