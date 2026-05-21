@@ -45,7 +45,7 @@ export function Nav() {
                   <a
                     href={l.href}
                     onClick={(e) => {
-                      if (l.label === "Consultation" || l.label === "Quick Enquire") {
+                      if (l.label === "Quick Enquire") {
                         e.preventDefault();
                         window.dispatchEvent(new Event('open-consultation-modal'));
                       }
@@ -153,7 +153,7 @@ export function Nav() {
                       href={l.href}
                       onClick={(e) => {
                         setOpen(false);
-                        if (l.label === "Consultation" || l.label === "Quick Enquire") {
+                        if (l.label === "Quick Enquire") {
                           e.preventDefault();
                           window.dispatchEvent(new Event('open-consultation-modal'));
                         }

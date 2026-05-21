@@ -6,7 +6,7 @@ import { ConsultationServices } from "@/components/consultation/Services";
 import { ConsultationProcess } from "@/components/consultation/Process";
 import { ConsultationSpaces } from "@/components/consultation/Spaces";
 import { ConsultationChannels } from "@/components/consultation/Channels";
-import { ConsultationCTA } from "@/components/ConsultationCTA";
+import { LeadForm } from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Private Consultation",
@@ -35,7 +35,7 @@ export default function ConsultationPage() {
       <ConsultationServices />
       <ConsultationProcess />
       <ConsultationSpaces />
-      <ConsultationCTA />
+      <LeadForm />
       <ConsultationChannels />
     </>
   );
