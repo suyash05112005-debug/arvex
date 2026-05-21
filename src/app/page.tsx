@@ -4,7 +4,7 @@ import { Manifesto } from "@/components/Manifesto";
 import { Gallery } from "@/components/Gallery";
 import { Craftsmanship } from "@/components/Craftsmanship";
 import { Recognition } from "@/components/Recognition";
-import { LeadForm } from "@/components/LeadForm";
+import { ConsultationCTA } from "@/components/ConsultationCTA";
 
 export default function HomePage() {
   return (
@@ -19,7 +19,7 @@ export default function HomePage() {
       <section id="recognition" className="scroll-mt-24">
         <Recognition />
       </section>
-      <LeadForm />
+      <ConsultationCTA />
     </>
   );
 }

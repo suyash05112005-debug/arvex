@@ -23,16 +23,11 @@ export function Nav() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-          scrolled ? "py-3" : "py-6"
+          "sticky top-0 z-50 w-full transition-all duration-500 border-b border-graphite/5 bg-high-key/85 backdrop-blur-xl",
+          scrolled ? "py-3 shadow-sm" : "py-5"
         )}
       >
-        <div
-          className={cn(
-            "mx-auto flex max-w-[1440px] items-center justify-between px-6 transition-all duration-500 md:px-12 lg:px-16",
-            scrolled && "rounded-full"
-          )}
-        >
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-16">
           <Link
             href="/"
             className="font-display text-2xl tracking-[0.02em] text-graphite md:text-3xl"
@@ -44,34 +39,36 @@ export function Nav() {
           </Link>
 
           <nav className="hidden md:block">
-            <ul
-              className={cn(
-                "flex items-center gap-1 rounded-full px-2 py-1 transition-all duration-500",
-                scrolled
-                  ? "glass shadow-glass"
-                  : "bg-transparent"
-              )}
-            >
+            <ul className="flex items-center gap-6">
               {LINKS.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="rounded-full px-4 py-2 text-[11.5px] uppercase tracking-[0.16em] text-graphite/70 transition-colors hover:bg-white/55 hover:text-graphite"
+                    onClick={(e) => {
+                      if (l.label === "Consultation" || l.label === "Quick Enquire") {
+                        e.preventDefault();
+                        window.dispatchEvent(new Event('open-consultation-modal'));
+                      }
+                    }}
+                    className="group relative flex items-center px-2 py-2 text-[11px] uppercase tracking-[0.18em] text-graphite/70 transition-colors hover:text-graphite"
                   >
                     {l.label}
+                    <span className="absolute inset-x-2 bottom-1.5 h-px scale-x-0 bg-champagne-400 transition-transform duration-500 ease-luxury group-hover:scale-x-100" />
                   </a>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <a
-              href="/consultation"
-              className="rounded-full bg-graphite px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] text-ivory transition-all duration-500 hover:bg-ink hover:shadow-halo"
+          <div className="hidden items-center md:flex">
+            <button
+              onClick={() => window.dispatchEvent(new Event('open-consultation-modal'))}
+              className="group relative overflow-hidden rounded-sm border border-graphite/20 bg-transparent px-6 py-2.5 text-[10.5px] uppercase tracking-[0.2em] text-graphite transition-all duration-500 hover:border-graphite hover:bg-graphite hover:text-ivory"
             >
-              Book Consultation
-            </a>
+              <span className="relative z-10 flex items-center gap-2">
+                Book Consultation
+              </span>
+            </button>
           </div>
 
           {/* Mobile trigger — 44px tap target per accessibility minimum */}
@@ -141,7 +138,13 @@ export function Nav() {
                   >
                     <a
                       href={l.href}
-                      onClick={() => setOpen(false)}
+                      onClick={(e) => {
+                        setOpen(false);
+                        if (l.label === "Consultation" || l.label === "Quick Enquire") {
+                          e.preventDefault();
+                          window.dispatchEvent(new Event('open-consultation-modal'));
+                        }
+                      }}
                       className="block font-display text-[clamp(2.5rem,10vw,3.5rem)] tracking-tight text-graphite"
                     >
                       {l.label}
@@ -151,13 +154,15 @@ export function Nav() {
               </ul>
 
               <div>
-                <a
-                  href="/consultation"
-                  onClick={() => setOpen(false)}
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    window.dispatchEvent(new Event('open-consultation-modal'));
+                  }}
                   className="btn-primary w-full justify-center"
                 >
                   Book Private Consultation →
-                </a>
+                </button>
                 <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40">
                   info@arvexgroup.in · Noida · Mumbai · Delhi
                 </p>

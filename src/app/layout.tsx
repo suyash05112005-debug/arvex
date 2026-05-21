@@ -8,6 +8,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { ConsultationModal } from "@/components/ConsultationModal";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({
           </div>
         </SmoothScroll>
         <WhatsAppButton />
+        <ConsultationModal />
       </body>
     </html>
   );

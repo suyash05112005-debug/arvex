@@ -6,7 +6,7 @@ import { PRODUCTS, getProduct } from "@/data/products";
 import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/seo/JsonLd";
 import { ProductHero } from "@/components/ProductHero";
 import { ProductPerspectives } from "@/components/ProductPerspectives";
-import { LeadForm } from "@/components/LeadForm";
+import { ConsultationCTA } from "@/components/ConsultationCTA";
 
 export function generateStaticParams() {
   return PRODUCTS.map((p) => ({ slug: p.slug }));
@@ -183,7 +183,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </section>
       )}
 
-      <LeadForm />
+      <ConsultationCTA />
     </>
   );
 }

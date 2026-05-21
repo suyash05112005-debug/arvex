@@ -180,10 +180,16 @@ export function Hero() {
               transition={{ duration: 1, delay: 1.0 }}
               className="mt-9 flex flex-wrap items-center gap-3 md:mt-12"
             >
-              <a href="#enquire" className="btn-primary">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-consultation-modal'));
+                }}
+                className="btn-primary"
+              >
                 Request Private Consultation
                 <span aria-hidden>→</span>
-              </a>
+              </button>
               <a href="#collection" className="btn-ghost">
                 View Collection
               </a>
