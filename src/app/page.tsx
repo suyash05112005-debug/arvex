@@ -1,7 +1,7 @@
 import { Hero } from "@/components/Hero";
 import { FeaturedPiece } from "@/components/FeaturedPiece";
 import { Manifesto } from "@/components/Manifesto";
-import { Gallery } from "@/components/Gallery";
+import { FeaturedCollection } from "@/components/FeaturedCollection";
 import { Craftsmanship } from "@/components/Craftsmanship";
 import { Recognition } from "@/components/Recognition";
 import { ConsultationCTA } from "@/components/ConsultationCTA";
@@ -12,7 +12,7 @@ export default function HomePage() {
       <Hero />
       <FeaturedPiece />
       <Manifesto />
-      <Gallery />
+      <FeaturedCollection />
       <section id="craft" className="scroll-mt-24">
         <Craftsmanship />
       </section>

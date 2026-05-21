@@ -41,7 +41,7 @@ export function Manifesto() {
           {CATEGORIES.map((c, i) => (
             <motion.a
               key={c.id}
-              href={`/?collection=${c.id}#collection`}
+              href={`/collection?collection=${c.id}`}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}

@@ -27,7 +27,7 @@ export function Footer() {
             <address className="mt-5 not-italic text-[14px] leading-[1.85] text-graphite/75">
               Arvex
               <br />
-              G-19, Sector 2
+              G-19, Noida Sector 3
               <br />
               Noida, UP 201301, India
               <br />
@@ -64,11 +64,11 @@ export function Footer() {
         {/* Link grid */}
         <div className="grid grid-cols-2 gap-8 border-t border-champagne-200/60 py-12 md:grid-cols-5 md:gap-10 md:py-14">
           <Col title="Collection">
-            <a href="#collection">All pieces</a>
-            <a href="/?collection=quantum-cascade#collection">Flowing Crystal</a>
-            <a href="/?collection=kinetic-geometry#collection">Modern Geometric</a>
-            <a href="/?collection=bio-luminescent#collection">Organic Series</a>
-            <a href="/?collection=hyper-minimalist#collection">The Minimalist</a>
+            <a href="/collection">All pieces</a>
+            <a href="/collection?collection=quantum-cascade">Flowing Crystal</a>
+            <a href="/collection?collection=kinetic-geometry">Modern Geometric</a>
+            <a href="/collection?collection=bio-luminescent">Organic Series</a>
+            <a href="/collection?collection=hyper-minimalist">The Minimalist</a>
           </Col>
           <Col title="Atelier">
             <a href="#craft">The Craft</a>
@@ -104,17 +104,38 @@ export function Footer() {
 
         {/* Wordmark + meta */}
         <div className="border-t border-champagne-200/60 pb-10 pt-10 md:pb-12 md:pt-12">
-          <div className="font-display text-[clamp(3.5rem,18vw,16rem)] leading-none tracking-tight text-graphite">
-            Arvex
+          <div className="font-display text-[clamp(3.5rem,18vw,16rem)] leading-none tracking-tight text-graphite flex items-end justify-between">
+            <span>Arvex</span>
+            <a 
+              href="https://www.instagram.com/arvexgroups/?hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hidden md:flex mb-6 h-12 w-12 items-center justify-center rounded-full border border-graphite/15 text-graphite/60 transition-all hover:border-champagne-400 hover:text-graphite hover:bg-white/50"
+              aria-label="Instagram"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
           </div>
-          <div className="mt-8 flex flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40 md:mt-10 md:flex-row md:items-center">
-            <span>© {new Date().getFullYear()} Arvex Atelier. All rights reserved.</span>
-            <span>Hand-built in Jaipur · Numbered editions across India</span>
-            <span className="flex gap-6">
+          <div className="mt-8 flex flex-col items-start justify-between gap-6 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40 md:mt-10 md:flex-row md:items-center">
+            <div className="flex flex-col gap-2 md:flex-row md:gap-6 md:items-center">
+              <span>© {new Date().getFullYear()} Arvex Atelier. All rights reserved.</span>
+              <span className="hidden md:inline">·</span>
+              <span>Hand-built in Jaipur · Numbered editions across India</span>
+            </div>
+            <span className="flex gap-6 items-center">
+              <a href="https://www.instagram.com/arvexgroups/?hl=en" target="_blank" rel="noopener noreferrer" className="md:hidden hover:text-graphite">Instagram</a>
               <a href="/privacy" className="hover:text-graphite">Privacy</a>
               <a href="/terms" className="hover:text-graphite">Terms</a>
               <a href="/cookies" className="hover:text-graphite">Cookies</a>
             </span>
+          </div>
+
+          <div className="mt-16 text-center border-t border-graphite/5 pt-8 font-mono text-[9px] uppercase tracking-[0.22em] text-graphite/30">
+            Powered by <a href="https://raftglobal.in" target="_blank" rel="noopener noreferrer" className="text-graphite/50 transition-colors hover:text-champagne-600">RaftGlobal.In</a> — All rights reserved
           </div>
         </div>
       </div>

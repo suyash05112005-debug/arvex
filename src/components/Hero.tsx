@@ -190,7 +190,7 @@ export function Hero() {
                 Request Private Consultation
                 <span aria-hidden>→</span>
               </button>
-              <a href="#collection" className="btn-ghost">
+              <a href="/collection" className="btn-ghost">
                 View Collection
               </a>
             </motion.div>

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { cn } from "@/lib/cn";
 
 const LINKS = [
-  { href: "/#collection", label: "Collection" },
+  { href: "/collection", label: "Collection" },
   { href: "/consultation", label: "Consultation" },
   { href: "/#enquire", label: "Quick Enquire" },
 ];
@@ -60,7 +60,20 @@ export function Nav() {
             </ul>
           </nav>
 
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center md:flex gap-4">
+            <a 
+              href="https://www.instagram.com/arvexgroups/?hl=en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-graphite/70 transition-all hover:bg-white/50 hover:text-graphite"
+              aria-label="Instagram"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
             <button
               onClick={() => window.dispatchEvent(new Event('open-consultation-modal'))}
               className="group relative overflow-hidden rounded-sm border border-graphite/20 bg-transparent px-6 py-2.5 text-[10.5px] uppercase tracking-[0.2em] text-graphite transition-all duration-500 hover:border-graphite hover:bg-graphite hover:text-ivory"
@@ -166,6 +179,20 @@ export function Nav() {
                 <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40">
                   info@arvexgroup.in · Noida · Mumbai · Delhi
                 </p>
+              </div>
+
+              <div className="mt-12 flex justify-between items-end border-t border-graphite/10 pt-8">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/50">
+                  Arvex Atelier
+                </span>
+                <a 
+                  href="https://www.instagram.com/arvexgroups/?hl=en" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite hover:text-champagne-600 transition-colors"
+                >
+                  Instagram
+                </a>
               </div>
             </motion.div>
           </motion.div>

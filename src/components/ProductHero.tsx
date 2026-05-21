@@ -57,10 +57,16 @@ export function ProductHero({ product }: { product: Product }) {
               transition={{ duration: 0.9, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="mt-12 flex flex-wrap gap-3"
             >
-              <a href="#enquire" className="btn-primary">
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.dispatchEvent(new Event('open-consultation-modal'));
+                }}
+                className="btn-primary"
+              >
                 Enquire about this piece →
-              </a>
-              <a href="/#collection" className="btn-ghost">
+              </button>
+              <a href="/collection" className="btn-ghost">
                 Back to Collection
               </a>
             </motion.div>

@@ -52,21 +52,36 @@ export function ConsultationChannels() {
               suits you. All initial consultations are at no charge.
             </p>
             
-            <div className="mt-14 hidden lg:block pr-12">
-              <div className="overflow-hidden rounded-sm ring-1 ring-graphite/10 shadow-editorial bg-ivory">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3503.7915609653155!2d77.31502447605995!3d28.57591877569566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45145b0a7db%3A0xc47e33dc9e5f039a!2sG-19%2C%20Sector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="280"
-                  style={{ border: 0, filter: "grayscale(0.6) opacity(0.9) contrast(1.1)" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Arvex Studio Location"
-                />
-              </div>
-              <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/60">
-                G-19, Sector 2 · Noida, UP
+            <div className="mt-14 pr-12">
+              <div className="flex flex-col gap-6 font-mono text-[11px] uppercase tracking-[0.2em] text-graphite/75">
+                <div>
+                  <span className="block text-champagne-600 mb-2 text-[9px] tracking-[0.22em]">Studio</span>
+                  <p>G-19, Noida Sector 3<br/>Noida, UP 201301, India</p>
+                </div>
+                <div>
+                  <span className="block text-champagne-600 mb-2 text-[9px] tracking-[0.22em]">Direct</span>
+                  <a href="tel:+919599075766" className="block hover:text-champagne-600 transition-colors mt-1">+91 95990 75766</a>
+                  <a href="mailto:info@arvexgroup.in" className="block hover:text-champagne-600 transition-colors mt-1">info@arvexgroup.in</a>
+                </div>
+                <div className="pt-2">
+                  <button 
+                    onClick={() => window.dispatchEvent(new Event('open-consultation-modal'))}
+                    className="btn-primary"
+                  >
+                    Book Consultation →
+                  </button>
+                </div>
+                <div className="pt-2">
+                  <a 
+                    href="https://www.instagram.com/arvexgroups/?hl=en" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 text-graphite hover:text-champagne-600 transition-colors"
+                  >
+                    <span className="h-px w-6 bg-champagne-400"></span>
+                    Instagram
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -104,24 +119,6 @@ export function ConsultationChannels() {
                 </motion.li>
               ))}
             </ul>
-            
-            <div className="mt-16 block lg:hidden">
-              <div className="overflow-hidden rounded-sm ring-1 ring-graphite/10 shadow-editorial bg-ivory">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3503.7915609653155!2d77.31502447605995!3d28.57591877569566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce45145b0a7db%3A0xc47e33dc9e5f039a!2sG-19%2C%20Sector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="240"
-                  style={{ border: 0, filter: "grayscale(0.6) opacity(0.9) contrast(1.1)" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Arvex Studio Location"
-                />
-              </div>
-              <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-graphite/60">
-                G-19, Sector 2 · Noida, UP
-              </div>
-            </div>
           </div>
         </div>
       </div>

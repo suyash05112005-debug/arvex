@@ -46,7 +46,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       <BreadcrumbJsonLd
         trail={[
           { name: "Home", url: "/" },
-          { name: "Collection", url: "/#collection" },
+          { name: "Collection", url: "/collection" },
           { name: p.name, url: `/product/${p.slug}` },
         ]}
       />
@@ -129,7 +129,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 </h2>
               </div>
               <Link
-                href="/#collection"
+                href="/collection"
                 className="font-mono text-[10px] uppercase tracking-[0.22em] text-graphite hover:text-champagne-600"
               >
                 View full collection →

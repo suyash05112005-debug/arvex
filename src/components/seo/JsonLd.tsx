@@ -31,7 +31,7 @@ export function OrganizationJsonLd() {
           addressRegion: "UP",
           addressLocality: "Noida",
           postalCode: "201301",
-          streetAddress: "G-19, Sector 2",
+          streetAddress: "G-19, Noida Sector 3",
         },
         contactPoint: [
           {
