@@ -134,8 +134,8 @@ export function Footer() {
             </span>
           </div>
 
-          <div className="mt-16 text-center border-t border-graphite/5 pt-8 font-mono text-[9px] uppercase tracking-[0.22em] text-graphite/30">
-            Powered by <a href="https://raftglobal.in" target="_blank" rel="noopener noreferrer" className="text-graphite/50 transition-colors hover:text-champagne-600">RaftGlobal.In</a> — All rights reserved
+          <div className="mt-16 text-center border-t border-graphite/5 pt-8 font-mono text-[9px] uppercase tracking-[0.22em] text-graphite/50">
+            Powered by <a href="https://raftglobal.in" target="_blank" rel="noopener noreferrer" className="text-graphite/70 font-medium transition-colors hover:text-champagne-600">RaftGlobal.In</a> — All rights reserved
           </div>
         </div>
       </div>
