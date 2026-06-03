@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function WhatsAppButton() {
   const message = "Hello Arvex, I would like a private consultation regarding your luxury lighting collection.";
-  const waUrl = `https://wa.me/917428690215?text=${encodeURIComponent(message)}`;
+  const waUrl = `https://wa.me/916290746602?text=${encodeURIComponent(message)}`;
   const igUrl = "https://www.instagram.com/arvexgroups/?hl=en";
 
   return (

@@ -33,16 +33,16 @@ export function Footer() {
               <br />
               <a
                 className="mt-3 inline-block text-graphite hover:text-champagne-600 transition-colors"
-                href="mailto:info@arvexgroup.in"
+                href="mailto:arvexgroup6@gmail.com"
               >
-                info@arvexgroup.in
+                arvexgroup6@gmail.com
               </a>
               <br />
               <a
                 className="inline-block text-graphite hover:text-champagne-600 transition-colors"
-                href="tel:+917428690215"
+                href="tel:+916290746602"
               >
-                +91 74286 90215
+                +91 62907 46602
               </a>
             </address>
           </div>
@@ -82,7 +82,7 @@ export function Footer() {
             <a href="/consultation">White-glove installation</a>
             <a href="mailto:aftercare@arvex.studio">Aftercare</a>
             <a
-              href={`https://wa.me/917428690215?text=${encodeURIComponent(
+              href={`https://wa.me/916290746602?text=${encodeURIComponent(
                 "Hello Arvex, I would like a private consultation regarding your luxury lighting collection."
               )}`}
               target="_blank"

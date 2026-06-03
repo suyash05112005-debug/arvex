@@ -14,7 +14,7 @@ const CHANNELS: Channel[] = [
     eyebrow: "WhatsApp",
     title: "Message the atelier directly",
     body: "Quick brief, room photographs, sketches — send them over and a senior member of the atelier will reply within the working day.",
-    cta: { label: "Consult via WhatsApp →", href: "https://wa.me/917428690215?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection." },
+    cta: { label: "Consult via WhatsApp →", href: "https://wa.me/916290746602?text=Hello%20Arvex%2C%20I%20would%20like%20a%20private%20consultation%20regarding%20your%20luxury%20lighting%20collection." },
   },
   {
     eyebrow: "Showroom",
@@ -26,7 +26,7 @@ const CHANNELS: Channel[] = [
     eyebrow: "Trade",
     title: "Architect & designer collaboration",
     body: "Trade pricing, technical drawings, IES files, on-site consultation, and shared moodboards. We work alongside studios across India.",
-    cta: { label: "info@arvexgroup.in →", href: "mailto:info@arvexgroup.in" },
+    cta: { label: "arvexgroup6@gmail.com →", href: "mailto:arvexgroup6@gmail.com" },
   },
   {
     eyebrow: "Video",
@@ -60,8 +60,8 @@ export function ConsultationChannels() {
                 </div>
                 <div>
                   <span className="block text-champagne-600 mb-2 text-[9px] tracking-[0.22em]">Direct</span>
-                  <a href="tel:+917428690215" className="block hover:text-champagne-600 transition-colors mt-1">+91 74286 90215</a>
-                  <a href="mailto:info@arvexgroup.in" className="block hover:text-champagne-600 transition-colors mt-1">info@arvexgroup.in</a>
+                  <a href="tel:+916290746602" className="block hover:text-champagne-600 transition-colors mt-1">+91 62907 46602</a>
+                  <a href="mailto:arvexgroup6@gmail.com" className="block hover:text-champagne-600 transition-colors mt-1">arvexgroup6@gmail.com</a>
                 </div>
                 <div className="pt-2">
                   <button 

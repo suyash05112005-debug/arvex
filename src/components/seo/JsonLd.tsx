@@ -37,8 +37,8 @@ export function OrganizationJsonLd() {
           contactPoint: [
             {
               "@type": "ContactPoint",
-              telephone: "+91-74286-90215",
-              email: "info@arvexgroup.in",
+              telephone: "+91-62907-46602",
+              email: "arvexgroup6@gmail.com",
               contactType: "customer support",
               areaServed: "IN",
               availableLanguage: ["en", "hi"],
@@ -54,7 +54,7 @@ export function OrganizationJsonLd() {
           image: `${SITE_URL}/logo.svg`,
           "@id": `${SITE_URL}/#localbusiness`,
           url: SITE_URL,
-          telephone: "+91-74286-90215",
+          telephone: "+91-62907-46602",
           address: {
             "@type": "PostalAddress",
             streetAddress: "G-19, Noida Sector 3",

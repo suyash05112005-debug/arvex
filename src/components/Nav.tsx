@@ -177,7 +177,7 @@ export function Nav() {
                   Book Private Consultation →
                 </button>
                 <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.2em] text-graphite/40">
-                  info@arvexgroup.in · Noida · Mumbai · Delhi
+                  arvexgroup6@gmail.com · Noida · Mumbai · Delhi
                 </p>
               </div>
 
