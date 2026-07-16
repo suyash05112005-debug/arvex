@@ -331,25 +331,6 @@ const PRODUCTS_BASE: Omit<Product, "images">[] = [
       { hue: "240", from: "rgba(255,255,255,0.0)", to: "rgba(26,55,104,0.6)", depth: 0.9 },
     ],
   },
-  {
-    slug: "silhouette",
-    name: "Silhouette",
-    category: "bio-luminescent",
-    tagline: "A bloom that listens.",
-    description:
-      "Silk-finish porcelain petals, each a soft luminaire. The full installation breathes in response to ambient sound, dimming when conversation rises.",
-    materials: ["Bone-white porcelain", "Acoustic sensor", "Warm LED"],
-    diameterCm: 110,
-    heightCm: 120,
-    weightKg: 40,
-    leadTimeWeeks: 16,
-    edition: "Edition of 10",
-    layers: [
-      { hue: "15", from: "#FAF8F3", to: "#F5C7C0", depth: 0 },
-      { hue: "15", from: "rgba(255,255,255,0.0)", to: "rgba(245,199,192,0.7)", depth: 0.5 },
-      { hue: "15", from: "rgba(255,255,255,0.0)", to: "rgba(200,140,130,0.4)", depth: 0.9 },
-    ],
-  },
   // HYPER-MINIMALIST
   {
     slug: "meridian",

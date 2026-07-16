@@ -71,8 +71,5 @@
   },
   "nova": {
     "hero": "/assets/products/generated/origami-nebula-hero.jpg"
-  },
-  "silhouette": {
-    "hero": "/assets/products/generated/petal-quiet-hero.jpg"
   }
 }
